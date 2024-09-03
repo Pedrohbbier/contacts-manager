@@ -48,31 +48,69 @@ A aplicação utiliza uma tabela chamada `contacts`, com os seguintes campos:
 
 ### **Pré-requisitos**
 
-- **Docker e Docker Compose**: Necessários para a utilização do Laravel Sail.
+- **Docker**: Necessários para a utilização do Laravel Sail.
 - **Node.js e npm**: Para o gerenciamento de pacotes front-end.
+- **PHP e Composer**: Para o gerenciamento do sail
 
-### **Passos para Instalação**
+## Passos para Instalação
 
-Clone o repositório:
-git clone https://github.com/seu-usuario/seu-repositorio.git
+1. **Clone o repositório:**
 
-Navegue até o diretório do projeto:
-cd seu-repositorio
+    ```bash
+    git clone https://github.com/Pedrohbbier/contacts-manager.git
+    ```
 
-Instale as dependências do Composer:
-./vendor/bin/sail composer install
+2. **Navegue até o diretório do projeto:**
 
-Instale as dependências do npm:
-./vendor/bin/sail npm install
+    ```bash
+    cd contacts-manager
+    ```
 
-Inicie os containers do Docker:
-./vendor/bin/sail up -d
+3. **Configurar o arquivo `.env`:**
 
-Execute as migrações do banco de dados:
-./vendor/bin/sail artisan migrate
+    ```bash
+    cp .env.example .env
+    ```
 
-Compile os assets front-end:
-./vendor/bin/sail npm run dev
+4. **Baixar e instalar o Laravel Sail:**
 
-Acesse a aplicação no navegador:
-http://localhost
+    ```bash
+    composer require laravel/sail --dev
+    php artisan sail:install
+    ```
+
+    > **Nota:** Aperte enter na opção `mysql`.
+
+5. **Instale as dependências do Composer:**
+
+    ```bash
+    ./vendor/bin/sail composer install
+    ```
+
+6. **Inicie os containers do Docker:**
+
+    ```bash
+    ./vendor/bin/sail up -d
+    ```
+
+7. **Instale as dependências do npm:**
+
+    ```bash
+    ./vendor/bin/sail npm install
+    ```
+
+8. **Execute as migrações do banco de dados:**
+
+    ```bash
+    ./vendor/bin/sail artisan migrate
+    ```
+
+9. **Compile os assets front-end:**
+
+    ```bash
+    ./vendor/bin/sail npm run dev
+    ```
+
+10. **Acesse a aplicação no navegador:**
+
+    [http://localhost](http://localhost)
