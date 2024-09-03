@@ -105,18 +105,24 @@ A aplicação utiliza uma tabela chamada `contacts`, com os seguintes campos:
     ./vendor/bin/sail artisan migrate
     ```
 
-9. **Compile os assets front-end:**
-
-    ```bash
-    ./vendor/bin/sail npm run dev
-    ```
-
-10. **Configurar app key**
+9. **Configurar app key**
 
     ```bash
     ./vendor/bin/sail artisan key:generate
     ```
 
-11. **Acesse a aplicação no navegador:**
+10. **Configurar dependências finais**
+
+    ```bash
+    ./vendor/bin/sail npm install --save-dev sass-embedded
+    ```
+
+11. **Compile os assets front-end:**
+
+    ```bash
+    ./vendor/bin/sail npm run dev
+    ```
+
+12. **Acesse a aplicação no navegador:**
 
     [http://localhost](http://localhost)
