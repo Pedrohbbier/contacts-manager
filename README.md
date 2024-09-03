@@ -111,6 +111,12 @@ A aplicação utiliza uma tabela chamada `contacts`, com os seguintes campos:
     ./vendor/bin/sail npm run dev
     ```
 
-10. **Acesse a aplicação no navegador:**
+10. **Configurar app key**
+
+    ```bash
+    ./vendor/bin/sail artisan key:generate
+    ```
+
+11. **Acesse a aplicação no navegador:**
 
     [http://localhost](http://localhost)
